@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeagueManager.Domain", "LeagueManager.Domain\LeagueManager.Domain.csproj", "{F4E96B83-9A66-463E-86BB-28BAF0A732F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeagueManager.Core", "LeagueManager.Core\LeagueManager.Core.csproj", "{8047A51B-E536-4747-AF36-9FD7248A684F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeagueManager.CreateDatabaseConsole", "LeagueManager.Console\LeagueManager.CreateDatabaseConsole.csproj", "{4608BE83-ACD6-4D34-9537-6C11CBE6545F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeagueManager.DataLayer", "LeagueManager.DataLayer\LeagueManager.DataLayer.csproj", "{B8D8F377-B68B-42A4-9243-627442558FD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeagueManager.UtilityUI", "LeagueManager.UtilityUI\LeagueManager.UtilityUI.csproj", "{E8BB2D63-4FAD-4BEF-81D3-DC29D3BD1748}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeagueManager.Services", "LeagueManager.Services\LeagueManager.Services.csproj", "{E775FEDE-82DE-413F-ACC2-284B5FC01D26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeagueManager.Proxies", "LeagueManager.Proxies\LeagueManager.Proxies.csproj", "{FE9F8BF5-FD3E-49DA-B98D-81D8E77434A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4E96B83-9A66-463E-86BB-28BAF0A732F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4E96B83-9A66-463E-86BB-28BAF0A732F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4E96B83-9A66-463E-86BB-28BAF0A732F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4E96B83-9A66-463E-86BB-28BAF0A732F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8047A51B-E536-4747-AF36-9FD7248A684F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8047A51B-E536-4747-AF36-9FD7248A684F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8047A51B-E536-4747-AF36-9FD7248A684F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8047A51B-E536-4747-AF36-9FD7248A684F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4608BE83-ACD6-4D34-9537-6C11CBE6545F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4608BE83-ACD6-4D34-9537-6C11CBE6545F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4608BE83-ACD6-4D34-9537-6C11CBE6545F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4608BE83-ACD6-4D34-9537-6C11CBE6545F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8D8F377-B68B-42A4-9243-627442558FD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8D8F377-B68B-42A4-9243-627442558FD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8D8F377-B68B-42A4-9243-627442558FD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8D8F377-B68B-42A4-9243-627442558FD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8BB2D63-4FAD-4BEF-81D3-DC29D3BD1748}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8BB2D63-4FAD-4BEF-81D3-DC29D3BD1748}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8BB2D63-4FAD-4BEF-81D3-DC29D3BD1748}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8BB2D63-4FAD-4BEF-81D3-DC29D3BD1748}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E775FEDE-82DE-413F-ACC2-284B5FC01D26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E775FEDE-82DE-413F-ACC2-284B5FC01D26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E775FEDE-82DE-413F-ACC2-284B5FC01D26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E775FEDE-82DE-413F-ACC2-284B5FC01D26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE9F8BF5-FD3E-49DA-B98D-81D8E77434A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE9F8BF5-FD3E-49DA-B98D-81D8E77434A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE9F8BF5-FD3E-49DA-B98D-81D8E77434A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE9F8BF5-FD3E-49DA-B98D-81D8E77434A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
