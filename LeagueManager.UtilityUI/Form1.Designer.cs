@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -43,23 +42,24 @@
             this.primaryPosition = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lblMessage = new System.Windows.Forms.Label();
+            this.hasSignedRoster = new System.Windows.Forms.CheckBox();
+            this.hasPaidLeagueFee = new System.Windows.Forms.CheckBox();
+            this.secondaryPosition = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.phoneNumber = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.email = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.battingPosition = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.leagueManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rostersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "League Manager Test UI";
             // 
             // listBox1
             // 
@@ -103,7 +103,7 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "Insert Team";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.InsertTeam_Click);
             // 
             // label3
             // 
@@ -175,88 +175,163 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(115, 366);
+            this.button3.Location = new System.Drawing.Point(459, 243);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 17;
             this.button3.Text = "Insert Player";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.InsertPlayer_Click);
             // 
-            // label9
+            // lblMessage
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 407);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "label9";
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Location = new System.Drawing.Point(178, 106);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(60, 13);
+            this.lblMessage.TabIndex = 18;
+            this.lblMessage.Text = "lblMessage";
             // 
-            // checkBox1
+            // hasSignedRoster
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(116, 320);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(93, 17);
-            this.checkBox1.TabIndex = 19;
-            this.checkBox1.Text = "Roster Signed";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.hasSignedRoster.AutoSize = true;
+            this.hasSignedRoster.Location = new System.Drawing.Point(329, 323);
+            this.hasSignedRoster.Name = "hasSignedRoster";
+            this.hasSignedRoster.Size = new System.Drawing.Size(93, 17);
+            this.hasSignedRoster.TabIndex = 19;
+            this.hasSignedRoster.Text = "Roster Signed";
+            this.hasSignedRoster.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // hasPaidLeagueFee
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(116, 343);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(107, 17);
-            this.checkBox2.TabIndex = 20;
-            this.checkBox2.Text = "League Fee Paid";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.hasPaidLeagueFee.AutoSize = true;
+            this.hasPaidLeagueFee.Location = new System.Drawing.Point(329, 346);
+            this.hasPaidLeagueFee.Name = "hasPaidLeagueFee";
+            this.hasPaidLeagueFee.Size = new System.Drawing.Size(107, 17);
+            this.hasPaidLeagueFee.TabIndex = 20;
+            this.hasPaidLeagueFee.Text = "League Fee Paid";
+            this.hasPaidLeagueFee.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // secondaryPosition
             // 
-            this.textBox2.Location = new System.Drawing.Point(326, 243);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 22;
+            this.secondaryPosition.Location = new System.Drawing.Point(115, 319);
+            this.secondaryPosition.Name = "secondaryPosition";
+            this.secondaryPosition.Size = new System.Drawing.Size(100, 20);
+            this.secondaryPosition.TabIndex = 22;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(221, 247);
+            this.label10.Location = new System.Drawing.Point(10, 323);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(98, 13);
             this.label10.TabIndex = 21;
             this.label10.Text = "Secondary Position";
             // 
-            // label12
+            // phoneNumber
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(176, 85);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(139, 13);
-            this.label12.TabIndex = 24;
-            this.label12.Text = "Current Contact Person";
+            this.phoneNumber.Location = new System.Drawing.Point(329, 243);
+            this.phoneNumber.Name = "phoneNumber";
+            this.phoneNumber.Size = new System.Drawing.Size(100, 20);
+            this.phoneNumber.TabIndex = 26;
             // 
-            // listBox2
+            // label11
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(177, 106);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(142, 95);
-            this.listBox2.TabIndex = 23;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(224, 247);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(78, 13);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "Phone Number";
+            // 
+            // email
+            // 
+            this.email.Location = new System.Drawing.Point(329, 269);
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(100, 20);
+            this.email.TabIndex = 28;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(224, 273);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(32, 13);
+            this.label13.TabIndex = 27;
+            this.label13.Text = "Email";
+            // 
+            // battingPosition
+            // 
+            this.battingPosition.Location = new System.Drawing.Point(329, 295);
+            this.battingPosition.Name = "battingPosition";
+            this.battingPosition.Size = new System.Drawing.Size(100, 20);
+            this.battingPosition.TabIndex = 30;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(224, 299);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(80, 13);
+            this.label14.TabIndex = 29;
+            this.label14.Text = "Batting Position";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.leagueManagerToolStripMenuItem,
+            this.viewToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(609, 24);
+            this.menuStrip1.TabIndex = 32;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // leagueManagerToolStripMenuItem
+            // 
+            this.leagueManagerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem});
+            this.leagueManagerToolStripMenuItem.Name = "leagueManagerToolStripMenuItem";
+            this.leagueManagerToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
+            this.leagueManagerToolStripMenuItem.Text = "LeagueManager";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.rostersToolStripMenuItem});
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.viewToolStripMenuItem.Text = "View";
+            // 
+            // rostersToolStripMenuItem
+            // 
+            this.rostersToolStripMenuItem.Name = "rostersToolStripMenuItem";
+            this.rostersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.rostersToolStripMenuItem.Text = "Rosters";
+            this.rostersToolStripMenuItem.Click += new System.EventHandler(this.rostersToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.Grip;
-            this.ClientSize = new System.Drawing.Size(588, 467);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.textBox2);
+            this.ClientSize = new System.Drawing.Size(609, 467);
+            this.Controls.Add(this.battingPosition);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.email);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.phoneNumber);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.secondaryPosition);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.hasPaidLeagueFee);
+            this.Controls.Add(this.hasSignedRoster);
+            this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.primaryPosition);
             this.Controls.Add(this.label8);
@@ -271,9 +346,12 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "League Manager Test UI";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,7 +359,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
@@ -296,13 +373,22 @@
         private System.Windows.Forms.TextBox primaryPosition;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label lblMessage;
+        private System.Windows.Forms.CheckBox hasSignedRoster;
+        private System.Windows.Forms.CheckBox hasPaidLeagueFee;
+        private System.Windows.Forms.TextBox secondaryPosition;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.TextBox phoneNumber;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox email;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox battingPosition;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem leagueManagerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rostersToolStripMenuItem;
     }
 }
 

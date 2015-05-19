@@ -47,9 +47,9 @@ namespace LeagueManager.Domain
         /// Initialize the Database with Data On Schema Rebuild
         /// </summary>
         /// <returns>List of Roster Object</returns>
-        public Roster InitializeDatabaseRoster()
+        public Roster InitializeDatabaseRoster(Guid team_id_fk)
         {
-            return new Roster() { RosterId = Guid.NewGuid(), LastUpdate = new LastUpdate() { UpdateUser = "Create Database Console", UpdateDate = DateTime.Now } };
+            return new Roster() { RosterId = Guid.NewGuid(), team_id_fk = team_id_fk, LastUpdate = new LastUpdate() { UpdateUser = "Create Database Console", UpdateDate = DateTime.Now } };
         } 
         #endregion
     }

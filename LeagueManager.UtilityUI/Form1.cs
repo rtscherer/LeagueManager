@@ -23,10 +23,10 @@ namespace LeagueManager.UtilityUI
 
             RefreshListBox1();
 
-            RefreshListBox2();
+            //RefreshListBox2();
         }
         
-        private void button2_Click(object sender, EventArgs e)
+        private void InsertTeam_Click(object sender, EventArgs e)
         {
             Team team = new Team()
             {
@@ -48,7 +48,7 @@ namespace LeagueManager.UtilityUI
             
             textBox1.Text = string.Empty;
 
-            label9.Text = "New Team and Empty Roster Added!";
+            lblMessage.Text = "New Team and Empty Roster Added!";
         }
 
         private void RefreshListBox1()
@@ -62,18 +62,18 @@ namespace LeagueManager.UtilityUI
             }
         }
 
-        private void RefreshListBox2()
-        {
-            listBox2.Items.Clear();
-            var contacts = new ContactPersonAccessor().GetContacts;
+        //private void RefreshListBox2()
+        //{
+        //    listBox2.Items.Clear();
+        //    var contacts = new ContactPersonAccessor().GetContacts;
 
-            foreach (var contact in contacts)
-            {
-                listBox2.Items.Add(contact.FirstName + " " + contact.LastName);
-            }
-        }
+        //    foreach (var contact in contacts)
+        //    {
+        //        listBox2.Items.Add(contact.FirstName + " " + contact.LastName);
+        //    }
+        //}
 
-        private void button3_Click(object sender, EventArgs e)
+        private void InsertPlayer_Click(object sender, EventArgs e)
         {
             int selectedTeam = listBox1.SelectedIndex;
             Team team = new TeamAccessor().GetTeams.ToArray()[selectedTeam];
@@ -89,18 +89,29 @@ namespace LeagueManager.UtilityUI
                 FirstName = firstName.Text,
                 LastName = lastName.Text,
                 PrimaryPosition = primaryPosition.Text,
-                PhoneNumber = string.Empty,
-                HasSignedRoster = checkBox1.Checked,
-                HasPayedLeagueFee = checkBox2.Checked,
-                EMail = string.Empty,
-                BattingPosition = "R",
-                SecondaryPosition = string.Empty,
+                SecondaryPosition = secondaryPosition.Text,
+                PhoneNumber = phoneNumber.Text,
+                HasSignedRoster = hasSignedRoster.Checked,
+                HasPayedLeagueFee = hasPaidLeagueFee.Checked,
+                EMail = email.Text,
+                BattingPosition = battingPosition.Text,
                 roster_id_fk = roster.RosterId,
                 LastUpdate = new LastUpdate() { UpdateUser = "UI", UpdateDate = DateTime.Now }
             };
             new PlayerAccessor().InsertPlayer(player);
 
-            label9.Text = string.Format("Player Added to {0}", team.Name);
+            lblMessage.Text = string.Format("Player Added to {0}", team.Name);
+        }
+
+        private void rostersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RosterGrid rosterGrid = new RosterGrid();
+            rosterGrid.Show();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

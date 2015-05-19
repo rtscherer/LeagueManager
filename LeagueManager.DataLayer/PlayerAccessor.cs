@@ -18,12 +18,46 @@ namespace LeagueManager.DataLayer
             connectionString = ConfigurationManager.ConnectionStrings["MYSQLSERVER"].ToString();
         }
 
+        public List<Player> Save(List<Player> players)
+        {
+            using (MySqlConnection mySqlConnection = new MySqlConnection(connectionString))
+            {
+                LeagueManagerContext leagueManagerContext = new LeagueManagerContext(mySqlConnection, false);
+                leagueManagerContext.Player.AddRange(players);
+                leagueManagerContext.SaveChanges();
+            }
+
+            return players;
+        }
+
+        public IEnumerable<Player> GetPlayers(Roster roster)
+        {
+            using (MySqlConnection mySqlConnection = new MySqlConnection(connectionString))
+            {
+                var players = new LeagueManagerContext(mySqlConnection, false).Player;
+
+                return from player in players
+                       where player.roster_id_fk == roster.RosterId
+                       select player;
+            }
+        }
+
         public void InsertPlayer(Player player)
         {
             using (MySqlConnection mySqlConnection = new MySqlConnection(connectionString))
             {
                 LeagueManagerContext leagueManagerContext = new LeagueManagerContext(mySqlConnection, false);
                 leagueManagerContext.Player.Add(player);
+                leagueManagerContext.SaveChanges();
+            }
+        }
+
+        public void DeletePlayer(Player player)
+        {
+            using (MySqlConnection mySqlConnection = new MySqlConnection(connectionString))
+            {
+                LeagueManagerContext leagueManagerContext = new LeagueManagerContext(mySqlConnection, false);
+                leagueManagerContext.Player.Remove(player);
                 leagueManagerContext.SaveChanges();
             }
         }

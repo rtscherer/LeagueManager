@@ -128,15 +128,19 @@ namespace LeagueManager.CreateDatabaseConsole
                         List<Team> teams = new Team().InitializeDatabaseTeams();
                         context.Team.AddRange(teams);
 
-                        //  [2.] Initialize Player Table with Data
-                        List<Player> players = new Player().InitializeDatabasePlayers();
-                        context.Player.AddRange(players);
-
                         //  [3.] Initialize Roster Table with Data
-                        Roster roster = new Roster().InitializeDatabaseRoster();
-                        roster.Team = teams[0];
-                        roster.Players = players;
-                        context.Roster.Add(roster);
+                        List<Roster> rosters = new List<Roster>();
+                        teams.ForEach(team =>
+                        {
+                            rosters.Add(new Roster().InitializeDatabaseRoster(team.TeamId));
+                        });
+
+                        //  [2.] Initialize Player Table with Data
+                        List<Player> players = new Player().InitializeDatabasePlayers(rosters[0].RosterId);
+                        rosters[0].Team = teams[0];
+                        rosters[0].Players = players;
+                        context.Roster.AddRange(rosters);
+                        context.Player.AddRange(players);
 
                         // [4.] Initialize Contact Person Table with Data
                         List<ContactPerson> contacts = new ContactPerson().InitializeDatabaseContactPerson();
@@ -149,14 +153,14 @@ namespace LeagueManager.CreateDatabaseConsole
                         Location location = new Location().InitializeDatabaseLocation();
                         context.Location.Add(location);
 
-                        //// [6.] Initialize Facility Table Data
+                        // [6.] Initialize Facility Table Data
                         Facility facility = new Facility().InitializeDatabaseFacility();
                         facility.contact_id_fk1 = contactPerson1.ContactPersonId;
                         facility.contact_id_fk2 = contactPerson2.ContactPersonId;
                         facility.location_id_fk = location.LocationId;
                         context.Facility.Add(facility);
 
-                        //// [7.] Initialize League Table Data
+                        // [7.] Initialize League Table Data
                         League league = new League().InitializeDatabaseLeague();
                         league.contactperson_id_fk1 = contactPerson1.ContactPersonId;
                         league.contactperson_id_fk2 = contactPerson2.ContactPersonId;

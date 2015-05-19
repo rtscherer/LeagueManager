@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeagueManager.Services", "L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeagueManager.Proxies", "LeagueManager.Proxies\LeagueManager.Proxies.csproj", "{FE9F8BF5-FD3E-49DA-B98D-81D8E77434A0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api.leaguemanager", "api.leaguemanager.com\api.leaguemanager.csproj", "{2C2FE297-57CB-47C0-A270-78B873E67067}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api.leaguemanager.Tests", "api.leaguemanager.com.Tests\api.leaguemanager.Tests.csproj", "{5ACC79A9-655B-490F-B173-FDC842BC36C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{FE9F8BF5-FD3E-49DA-B98D-81D8E77434A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE9F8BF5-FD3E-49DA-B98D-81D8E77434A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE9F8BF5-FD3E-49DA-B98D-81D8E77434A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C2FE297-57CB-47C0-A270-78B873E67067}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C2FE297-57CB-47C0-A270-78B873E67067}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C2FE297-57CB-47C0-A270-78B873E67067}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C2FE297-57CB-47C0-A270-78B873E67067}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ACC79A9-655B-490F-B173-FDC842BC36C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ACC79A9-655B-490F-B173-FDC842BC36C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ACC79A9-655B-490F-B173-FDC842BC36C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ACC79A9-655B-490F-B173-FDC842BC36C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
