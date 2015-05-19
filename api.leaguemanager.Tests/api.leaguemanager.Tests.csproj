@@ -123,7 +123,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\api.leaguemanager.com\api.leaguemanager.csproj">
+    <ProjectReference Include="..\api.leaguemanager\api.leaguemanager.csproj">
       <Project>{2C2FE297-57CB-47C0-A270-78B873E67067}</Project>
       <Name>api.leaguemanager</Name>
     </ProjectReference>
