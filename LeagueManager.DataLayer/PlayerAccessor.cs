@@ -30,14 +30,14 @@ namespace LeagueManager.DataLayer
             return players;
         }
 
-        public IEnumerable<Player> GetPlayers(Roster roster)
+        public IEnumerable<Player> GetPlayers(Guid rosterId)
         {
             using (MySqlConnection mySqlConnection = new MySqlConnection(connectionString))
             {
                 var players = new LeagueManagerContext(mySqlConnection, false).Player;
 
                 return from player in players
-                       where player.roster_id_fk == roster.RosterId
+                       where player.roster_id_fk == rosterId
                        select player;
             }
         }

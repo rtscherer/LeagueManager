@@ -13,10 +13,10 @@ namespace api.leaguemanager.Controllers
     public class PlayersController : ApiController
     {
         // GET: /Players/
-        public IEnumerable<Player> Get()
-        {
-            return new PlayerManager().GetPlayers();
-        }
+        //public IEnumerable<Player> Get()
+        //{
+        //    return new PlayerManager().GetPlayers();
+        //}
 
         // GET api/values/5
         public string Get(int id)

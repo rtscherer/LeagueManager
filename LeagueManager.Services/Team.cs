@@ -28,7 +28,7 @@ namespace LeagueManager.Services
         /// <returns>IEnumerable of Type Team</returns>
         public IEnumerable<Domain.Team> GetTeams()
         {
-            return new TeamManager().GetTeams();
+            return new TeamManager().GetAllTeams();
         }
 
         /// <summary>

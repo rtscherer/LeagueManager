@@ -18,7 +18,19 @@ namespace LeagueManager.DataLayer
             connectionString = ConfigurationManager.ConnectionStrings["MYSQLSERVER"].ToString();
         }
 
-        public IEnumerable<Team> GetTeams
+        public Team GetTeamById(Guid teamId)
+        {
+            using (MySqlConnection mySqlConnection = new MySqlConnection(connectionString))
+            {
+                var teams = new LeagueManagerContext(mySqlConnection, false).Team;
+
+                return (from team in teams
+                        where team.TeamId == teamId
+                        select team).FirstOrDefault();
+            }
+        }
+
+        public IEnumerable<Team> GetAllTeams
         {
             get
             {
@@ -38,6 +50,21 @@ namespace LeagueManager.DataLayer
                 LeagueManagerContext leagueManagerContext = new LeagueManagerContext(mySqlConnection, false);
                 leagueManagerContext.Team.Add(team);
                 leagueManagerContext.SaveChanges();
+            }
+        }
+
+        public void UpdateTeam(Team team)
+        {
+            using (MySqlConnection mySqlConnection = new MySqlConnection(connectionString))
+            {
+                LeagueManagerContext leagueManagerContext = new LeagueManagerContext(mySqlConnection, false);
+                var existingTeam = leagueManagerContext.Team.SingleOrDefault(t => t.TeamId == team.TeamId);
+                if (existingTeam != null)
+                {
+                    existingTeam = team;
+                    leagueManagerContext.SaveChanges();
+                }
+                else throw new ArgumentException(string.Format("Team does not exist to update. TeamId: {0}.", team.TeamId), team.TeamId.ToString());
             }
         }
 

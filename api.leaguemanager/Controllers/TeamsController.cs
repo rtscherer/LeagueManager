@@ -12,15 +12,15 @@ namespace api.leaguemanager.Controllers
     public class TeamsController : ApiController
     {
         // GET api/values
-        public IEnumerable<Team> Get()
+        public IEnumerable<Team> GetAllTeams()
         {
-            return new TeamManager().GetTeams();
+            return new TeamManager().GetAllTeams();
         }
 
         // GET api/values/5
-        public string Get(int id)
+        public Team GetTeamById(Guid id)
         {
-            return "value";
+            return new TeamManager().GetTeamById(id);
         }
 
         // POST api/values

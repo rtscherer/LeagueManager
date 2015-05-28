@@ -54,7 +54,7 @@ namespace LeagueManager.UtilityUI
         private void RefreshListBox1()
         {
             listBox1.Items.Clear();
-            var teams = new TeamAccessor().GetTeams;
+            var teams = new TeamAccessor().GetAllTeams;
 
             foreach (var team in teams)
             {
@@ -76,7 +76,7 @@ namespace LeagueManager.UtilityUI
         private void InsertPlayer_Click(object sender, EventArgs e)
         {
             int selectedTeam = listBox1.SelectedIndex;
-            Team team = new TeamAccessor().GetTeams.ToArray()[selectedTeam];
+            Team team = new TeamAccessor().GetAllTeams.ToArray()[selectedTeam];
             var rosters = new RosterAccessor().GetRosters;
 
             var roster = (from r in rosters

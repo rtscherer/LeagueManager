@@ -23,23 +23,23 @@ namespace LeagueManager.UtilityUI
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int selectedTeam = comboBox1.SelectedIndex;
-            Team team = new TeamAccessor().GetTeams.ToArray()[selectedTeam];
-            var rosters = new RosterAccessor().GetRosters;
-            var roster = (from r in rosters
-                         where r.team_id_fk == team.TeamId
-                         select r).FirstOrDefault();
+            //int selectedTeam = comboBox1.SelectedIndex;
+            //Team team = new TeamAccessor().GetAllTeams.ToArray()[selectedTeam];
+            //var rosters = new RosterAccessor().GetRosters;
+            //var roster = (from r in rosters
+            //             where r.team_id_fk == team.TeamId
+            //             select r).FirstOrDefault();
 
-            if (roster == null) return;
+            //if (roster == null) return;
 
-            var players = new PlayerAccessor().GetPlayers(roster);
+            //var players = new PlayerAccessor().GetPlayers(roster);
 
-            dataGridView1.DataSource = players.ToList();
+            //dataGridView1.DataSource = players.ToList();
         }
 
         private void PopulateComboBox()
         {
-            var teams = new TeamAccessor().GetTeams;
+            var teams = new TeamAccessor().GetAllTeams;
             List<string> teamNames = new List<string>();
             foreach (var team in teams)
                 teamNames.Add(team.Name);

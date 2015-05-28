@@ -10,9 +10,14 @@ namespace LeagueManager.Core
 {
     public class TeamManager
     {
-        public IEnumerable<Team> GetTeams()
+        public Team GetTeamById(Guid teamId)
         {
-            return new TeamAccessor().GetTeams;
+            return new TeamAccessor().GetTeamById(teamId);
+        }
+
+        public IEnumerable<Team> GetAllTeams()
+        {
+            return new TeamAccessor().GetAllTeams;
         }
 
         public Team InsertTeam(string name)
@@ -34,6 +39,11 @@ namespace LeagueManager.Core
             new RosterAccessor().InsertRoster(roster);
 
             return team;
+        }
+
+        public void UpdateTeam(Team team)
+        {
+            new TeamAccessor().UpdateTeam(team);
         }
 
         public void DeleteTeam(Guid teamId)
