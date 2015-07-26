@@ -1,4 +1,4 @@
-﻿using LeagueManager.DataLayer;
+﻿using LeagueManager.Data;
 using LeagueManager.Domain;
 using System;
 using System.Collections.Generic;

@@ -7,7 +7,7 @@
     <ProjectGuid>{B8D8F377-B68B-42A4-9243-627442558FD8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LeagueManager.DataLayer</RootNamespace>
+    <RootNamespace>LeagueManager.Data</RootNamespace>
     <AssemblyName>LeagueManager.DataLayer</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

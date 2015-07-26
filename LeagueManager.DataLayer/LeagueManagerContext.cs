@@ -8,7 +8,7 @@ using MySql.Data.Entity;
 using System.Data.Common;
 using LeagueManager.Domain;
 
-namespace LeagueManager.DataLayer
+namespace LeagueManager.Data
 {
     [DbConfigurationType(typeof(MySqlEFConfiguration))]
     public class LeagueManagerContext : DbContext

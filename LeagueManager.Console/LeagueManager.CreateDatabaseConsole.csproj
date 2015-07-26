@@ -72,9 +72,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LeagueManager.DataLayer\LeagueManager.DataLayer.csproj">
+    <ProjectReference Include="..\LeagueManager.DataLayer\LeagueManager.Data.csproj">
       <Project>{b8d8f377-b68b-42a4-9243-627442558fd8}</Project>
-      <Name>LeagueManager.DataLayer</Name>
+      <Name>LeagueManager.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\LeagueManager.Domain\LeagueManager.Domain.csproj">
       <Project>{f4e96b83-9a66-463e-86bb-28baf0a732f9}</Project>

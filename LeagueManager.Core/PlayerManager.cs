@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LeagueManager.Domain;
-using LeagueManager.DataLayer;
+using LeagueManager.Data;
 
 namespace LeagueManager.Core
 {

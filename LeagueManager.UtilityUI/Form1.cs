@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using LeagueManager.DataLayer;
+using LeagueManager.Data;
 using LeagueManager.Domain;
 using MySql.Data.Entity;
 using System.Configuration;

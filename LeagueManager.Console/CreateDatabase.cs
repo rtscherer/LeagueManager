@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Configuration;
-using LeagueManager.DataLayer;
+using LeagueManager.Data;
 
 namespace LeagueManager.CreateDatabaseConsole
 {

@@ -7,7 +7,7 @@ using System.Configuration;
 using MySql.Data.MySqlClient;
 using LeagueManager.Domain;
 
-namespace LeagueManager.DataLayer
+namespace LeagueManager.Data
 {
     public class PlayerAccessor
     {
