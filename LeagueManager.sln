@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeagueManager.Domain", "Lea
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeagueManager.Core", "LeagueManager.Core\LeagueManager.Core.csproj", "{8047A51B-E536-4747-AF36-9FD7248A684F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeagueManager.CreateDatabaseConsole", "LeagueManager.Console\LeagueManager.CreateDatabaseConsole.csproj", "{4608BE83-ACD6-4D34-9537-6C11CBE6545F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeagueManager.DatabaseConsole", "LeagueManager.Console\LeagueManager.DatabaseConsole.csproj", "{4608BE83-ACD6-4D34-9537-6C11CBE6545F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeagueManager.Data", "LeagueManager.DataLayer\LeagueManager.Data.csproj", "{B8D8F377-B68B-42A4-9243-627442558FD8}"
 EndProject

@@ -8,7 +8,7 @@ using MySql.Data.MySqlClient;
 using System.Configuration;
 using LeagueManager.Data;
 
-namespace LeagueManager.CreateDatabaseConsole
+namespace LeagueManager.DatabaseConsole
 {
     class CreateDatabase
     {

@@ -7,7 +7,7 @@
     <ProjectGuid>{4608BE83-ACD6-4D34-9537-6C11CBE6545F}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LeagueManager.CreateDatabaseConsole</RootNamespace>
+    <RootNamespace>LeagueManager.DatabaseConsole</RootNamespace>
     <AssemblyName>LeagueManager.ConsoleApp</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
