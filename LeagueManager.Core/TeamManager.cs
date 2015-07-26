@@ -26,7 +26,7 @@ namespace LeagueManager.Core
             {
                 TeamId = Guid.NewGuid(),
                 Name = name,
-                LastUpdate = new LastUpdate() { UpdateUser = "TeamService", UpdateDate = DateTime.Now }
+                LastUpdate = new LastUpdate() { UpdateUser = "Api", UpdateDate = DateTime.Now }
             };
             new TeamAccessor().InsertTeam(team);
 
@@ -34,7 +34,7 @@ namespace LeagueManager.Core
             {
                 RosterId = Guid.NewGuid(),
                 team_id_fk = team.TeamId,
-                LastUpdate = new LastUpdate() { UpdateUser = "TeamService", UpdateDate = DateTime.Now }
+                LastUpdate = new LastUpdate() { UpdateUser = "Api", UpdateDate = DateTime.Now }
             };
             new RosterAccessor().InsertRoster(roster);
 

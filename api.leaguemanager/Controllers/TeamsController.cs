@@ -11,6 +11,8 @@ namespace api.leaguemanager.Controllers
 {
     public class TeamsController : ApiController
     {
+        public TeamsController() { }
+
         // GET api/values
         public IEnumerable<Team> GetAllTeams()
         {
@@ -24,18 +26,38 @@ namespace api.leaguemanager.Controllers
         }
 
         // POST api/values
-        public void Post([FromBody]string value)
+        [HttpPost]
+        public Team Post([FromBody]string Name)
         {
+            Team team = new TeamManager().InsertTeam(Name);
+
+            var inserted = new TeamManager().GetTeamById(team.TeamId);
+            if (inserted == null)
+                throw new HttpResponseException(new HttpResponseMessage(HttpStatusCode.NotFound));
+
+            return inserted;
         }
 
         // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
+        public Team Put(Guid id, Team value)
         {
+            var updated = new TeamManager().GetTeamById(id);
+            if (updated == null)
+                throw new HttpResponseException(new HttpResponseMessage(HttpStatusCode.NotFound));
+
+            new TeamManager().UpdateTeam(value);
+            return updated;
         }
 
         // DELETE api/values/5
-        public void Delete(int id)
+        public Team Delete(Guid id)
         {
+            var deleted = new TeamManager().GetTeamById(id);
+            if (deleted == null)
+                throw new HttpResponseException(new HttpResponseMessage(HttpStatusCode.NotFound));
+
+            new TeamManager().DeleteTeam(id);
+            return deleted;
         }
     }
 }
