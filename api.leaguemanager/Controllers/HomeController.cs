@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace api.leaguemanager.com.Controllers
+namespace LeagueManager.Api.Controllers
 {
     public class HomeController : Controller
     {

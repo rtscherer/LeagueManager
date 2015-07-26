@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace api.leaguemanager.com
+namespace LeagueManager.Api
 {
     public class BundleConfig
     {

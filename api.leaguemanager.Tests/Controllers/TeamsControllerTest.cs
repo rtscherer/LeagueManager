@@ -5,11 +5,11 @@ using System.Net.Http;
 using System.Text;
 using System.Web.Http;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using api.leaguemanager;
-using api.leaguemanager.Controllers;
+using LeagueManager.Api;
+using LeagueManager.Api.Controllers;
 using LeagueManager.Domain;
 
-namespace api.leaguemanager.Tests.Controllers
+namespace LeagueManager.Api.Tests.Controllers
 {
     [TestClass]
     public class TeamsControllerTest

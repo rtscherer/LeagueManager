@@ -7,7 +7,7 @@ using System.Web.Http;
 using LeagueManager.Domain;
 using LeagueManager.Core;
 
-namespace api.leaguemanager.Controllers
+namespace LeagueManager.Api.Controllers
 {
     public class TeamsController : ApiController
     {

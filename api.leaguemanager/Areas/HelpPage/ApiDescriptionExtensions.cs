@@ -3,7 +3,7 @@ using System.Text;
 using System.Web;
 using System.Web.Http.Description;
 
-namespace api.leaguemanager.com.Areas.HelpPage
+namespace LeagueManager.Api.Areas.HelpPage
 {
     public static class ApiDescriptionExtensions
     {

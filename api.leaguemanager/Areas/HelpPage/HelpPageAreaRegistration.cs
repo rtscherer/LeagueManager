@@ -1,7 +1,7 @@
 using System.Web.Http;
 using System.Web.Mvc;
 
-namespace api.leaguemanager.com.Areas.HelpPage
+namespace LeagueManager.Api.Areas.HelpPage
 {
     public class HelpPageAreaRegistration : AreaRegistration
     {

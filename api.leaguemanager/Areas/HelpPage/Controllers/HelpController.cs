@@ -1,9 +1,9 @@
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using api.leaguemanager.com.Areas.HelpPage.Models;
+using LeagueManager.Api.Areas.HelpPage.Models;
 
-namespace api.leaguemanager.com.Areas.HelpPage.Controllers
+namespace LeagueManager.Api.Areas.HelpPage.Controllers
 {
     /// <summary>
     /// The controller that will handle requests for the help page.

@@ -7,9 +7,9 @@ using System.Linq;
 using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Web.Http.Description;
-using api.leaguemanager.com.Areas.HelpPage.Models;
+using LeagueManager.Api.Areas.HelpPage.Models;
 
-namespace api.leaguemanager.com.Areas.HelpPage
+namespace LeagueManager.Api.Areas.HelpPage
 {
     public static class HelpPageConfigurationExtensions
     {

@@ -123,9 +123,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\api.leaguemanager\api.leaguemanager.csproj">
+    <ProjectReference Include="..\api.leaguemanager\LeagueManager.Api.csproj">
       <Project>{2C2FE297-57CB-47C0-A270-78B873E67067}</Project>
-      <Name>api.leaguemanager</Name>
+      <Name>LeagueManager.Api</Name>
     </ProjectReference>
     <ProjectReference Include="..\LeagueManager.Domain\LeagueManager.Domain.csproj">
       <Project>{f4e96b83-9a66-463e-86bb-28baf0a732f9}</Project>
